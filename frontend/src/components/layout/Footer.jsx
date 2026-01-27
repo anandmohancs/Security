@@ -188,8 +188,9 @@ export const Footer = () => {
             {/* Scroll to Top Button */}
             <button
                 onClick={scrollToTop}
-                className="fixed bottom-8 right-8 w-12 h-12 rounded-full btn-accent flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 z-40"
+                className="fixed bottom-20 right-8 w-12 h-12 rounded-full btn-accent flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 z-[9999]"
                 aria-label="Scroll to top"
+                data-testid="scroll-to-top"
             >
                 <ArrowUp className="w-5 h-5" />
             </button>
