@@ -34,8 +34,8 @@ export const Navbar = () => {
             <nav 
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
                     isScrolled 
-                        ? 'glass py-3 shadow-lg' 
-                        : 'bg-transparent py-5'
+                        ? 'bg-card/95 backdrop-blur-lg py-3 shadow-xl border-b border-border' 
+                        : 'bg-card/80 backdrop-blur-md py-4'
                 }`}
             >
                 <div className="container mx-auto px-4 lg:px-8">
@@ -43,16 +43,15 @@ export const Navbar = () => {
                         {/* Logo */}
                         <Link to="/" className="flex items-center gap-3 group">
                             <div className="relative">
-                                <div className="w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <Shield className="w-7 h-7 text-navy-dark" strokeWidth={2.5} />
+                                <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <Shield className="w-6 h-6 text-accent-foreground" strokeWidth={2.5} />
                                 </div>
-                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-display text-2xl lg:text-3xl tracking-wide text-foreground">
+                                <span className="font-display text-xl lg:text-2xl tracking-wide text-foreground">
                                     SHIVA
                                 </span>
-                                <span className="text-[10px] lg:text-xs font-medium text-muted-foreground tracking-[0.2em] -mt-1">
+                                <span className="text-[9px] lg:text-[10px] font-medium text-muted-foreground tracking-[0.15em] -mt-1">
                                     SECURITY SERVICES
                                 </span>
                             </div>
@@ -67,7 +66,7 @@ export const Navbar = () => {
                                     className={`relative font-medium text-sm tracking-wide transition-colors duration-300 ${
                                         isActive(link.path)
                                             ? 'text-accent'
-                                            : 'text-foreground/80 hover:text-accent'
+                                            : 'text-foreground hover:text-accent'
                                     }`}
                                 >
                                     {link.name}
