@@ -385,7 +385,7 @@ export const HomePage = () => {
                                 </div>
                                 
                                 <blockquote className="text-center text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
-                                    "{testimonials[activeTestimonial].content}"
+                                    "&ldquo;{testimonials[activeTestimonial].content}&rdquo;"
                                 </blockquote>
                                 
                                 <div className="text-center">
