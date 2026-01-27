@@ -364,7 +364,7 @@ export const HomePage = () => {
                             WHAT OUR CLIENTS SAY
                         </h2>
                         <p className="text-muted-foreground text-lg">
-                            Don't just take our word for it. Here's what our valued clients 
+                            Do not just take our word for it. Here is what our valued clients 
                             have to say about our security services.
                         </p>
                     </div>
@@ -385,7 +385,7 @@ export const HomePage = () => {
                                 </div>
                                 
                                 <blockquote className="text-center text-xl lg:text-2xl text-foreground leading-relaxed mb-8 font-medium">
-                                    "&ldquo;{testimonials[activeTestimonial].content}&rdquo;"
+                                    {testimonials[activeTestimonial].content}
                                 </blockquote>
                                 
                                 <div className="text-center">

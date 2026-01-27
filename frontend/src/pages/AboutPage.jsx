@@ -184,7 +184,7 @@ export const AboutPage = () => {
                             </div>
                             <h3 className="font-display text-3xl text-foreground mb-4">OUR VISION</h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                To be recognized as India's premier security service provider, 
+                                To be recognized as India&#39;s premier security service provider, 
                                 setting industry standards for professionalism, reliability, and 
                                 innovation. We envision a safer India where every client feels 
                                 secure and protected through our comprehensive security solutions.
