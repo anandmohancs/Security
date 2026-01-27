@@ -97,87 +97,121 @@ export const HomePage = () => {
 
     return (
         <div className="overflow-hidden">
-            {/* Hero Section - Split Screen */}
-            <section className="min-h-screen relative flex flex-col lg:flex-row">
-                {/* Left Content */}
-                <div className="w-full lg:w-1/2 min-h-[60vh] lg:min-h-screen flex items-center bg-hero-pattern relative z-10 px-6 lg:px-16 py-24 lg:py-0">
-                    <div className="max-w-xl mx-auto lg:mx-0">
-                        <Badge className="bg-accent/20 text-accent border-accent/30 mb-6 animate-fade-in">
-                            <Shield className="w-3 h-3 mr-1" />
-                            PSARA Licensed Security Provider
-                        </Badge>
-                        
-                        <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-primary-foreground leading-tight mb-6 animate-fade-in animation-delay-100">
-                            PROTECTING WHAT
-                            <span className="text-gradient-gold block">MATTERS MOST</span>
-                        </h1>
-                        
-                        <p className="text-primary-foreground/80 text-lg mb-8 leading-relaxed animate-fade-in animation-delay-200">
-                            Shiva Security Services delivers comprehensive security solutions across India. 
-                            From armed guards to corporate protection, we ensure your safety with trained professionals.
-                        </p>
-                        
-                        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
-                            <Link to="/contact">
-                                <Button className="btn-accent rounded-lg px-8 py-6 text-lg font-semibold w-full sm:w-auto">
-                                    Get Free Quote
-                                    <ChevronRight className="w-5 h-5 ml-2" />
-                                </Button>
-                            </Link>
-                            <Link to="/services">
-                                <Button 
-                                    variant="outline" 
-                                    className="rounded-lg px-8 py-6 text-lg font-semibold border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto"
-                                >
-                                    Our Services
-                                </Button>
-                            </Link>
+            {/* Hero Section - Full Width Modern Design */}
+            <section className="relative min-h-screen flex items-center pt-20">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <div 
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{ 
+                            backgroundImage: 'url(https://images.unsplash.com/photo-1485230405346-71acb9518d9c?w=1920&h=1200&fit=crop&q=80)'
+                        }}
+                    />
+                    {/* Dark Gradient Overlay for better text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background" />
+                </div>
+
+                {/* Content */}
+                <div className="container mx-auto px-4 lg:px-8 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
+                        {/* Left Content */}
+                        <div className="py-12 lg:py-0">
+                            <Badge className="bg-accent/20 text-accent border-accent/30 mb-6 animate-fade-in">
+                                <Shield className="w-3 h-3 mr-1" />
+                                PSARA Licensed Security Provider
+                            </Badge>
+                            
+                            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-foreground leading-tight mb-6 animate-fade-in animation-delay-100">
+                                PROTECTING WHAT
+                                <span className="text-accent block">MATTERS MOST</span>
+                            </h1>
+                            
+                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed animate-fade-in animation-delay-200 max-w-xl">
+                                Shiva Security Services delivers comprehensive security solutions across India. 
+                                From armed guards to corporate protection, we ensure your safety with trained professionals.
+                            </p>
+                            
+                            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
+                                <Link to="/contact">
+                                    <Button className="btn-accent rounded-lg px-8 py-6 text-lg font-semibold w-full sm:w-auto">
+                                        Get Free Quote
+                                        <ChevronRight className="w-5 h-5 ml-2" />
+                                    </Button>
+                                </Link>
+                                <Link to="/services">
+                                    <Button 
+                                        variant="outline" 
+                                        className="rounded-lg px-8 py-6 text-lg font-semibold border-border text-foreground hover:bg-muted w-full sm:w-auto"
+                                    >
+                                        Our Services
+                                    </Button>
+                                </Link>
+                            </div>
+
+                            {/* Trust Badges */}
+                            <div className="mt-12 flex flex-wrap items-center gap-6 animate-fade-in animation-delay-400">
+                                <div className="flex items-center gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                                    <span className="text-muted-foreground text-sm">Licensed & Insured</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                                    <span className="text-muted-foreground text-sm">24/7 Support</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                                    <span className="text-muted-foreground text-sm">Pan India Coverage</span>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Trust Badges */}
-                        <div className="mt-12 flex flex-wrap items-center gap-6 animate-fade-in animation-delay-400">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5 text-accent" />
-                                <span className="text-primary-foreground/70 text-sm">Licensed & Insured</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5 text-accent" />
-                                <span className="text-primary-foreground/70 text-sm">24/7 Support</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5 text-accent" />
-                                <span className="text-primary-foreground/70 text-sm">Pan India Coverage</span>
-                            </div>
+                        {/* Right Side - Stats Cards */}
+                        <div className="hidden lg:flex flex-col items-end gap-6 animate-fade-in animation-delay-500">
+                            <Card className="bg-card/80 backdrop-blur border-border p-6 w-72 shadow-xl">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                                        <Users className="w-7 h-7 text-accent" />
+                                    </div>
+                                    <div>
+                                        <p className="font-display text-3xl text-foreground">500+</p>
+                                        <p className="text-muted-foreground text-sm">Active Guards</p>
+                                    </div>
+                                </div>
+                            </Card>
+                            <Card className="bg-card/80 backdrop-blur border-border p-6 w-72 shadow-xl mr-12">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                                        <Award className="w-7 h-7 text-accent" />
+                                    </div>
+                                    <div>
+                                        <p className="font-display text-3xl text-foreground">200+</p>
+                                        <p className="text-muted-foreground text-sm">Happy Clients</p>
+                                    </div>
+                                </div>
+                            </Card>
+                            <Card className="bg-card/80 backdrop-blur border-border p-6 w-72 shadow-xl">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                                        <Clock className="w-7 h-7 text-accent" />
+                                    </div>
+                                    <div>
+                                        <p className="font-display text-3xl text-foreground">15+</p>
+                                        <p className="text-muted-foreground text-sm">Years Experience</p>
+                                    </div>
+                                </div>
+                            </Card>
                         </div>
                     </div>
                 </div>
 
-                {/* Right Image */}
-                <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen relative">
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ 
-                            backgroundImage: 'url(https://images.unsplash.com/photo-1485230405346-71acb9518d9c?w=1200&h=1600&fit=crop)'
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy-dark/50 to-transparent lg:from-navy-dark/80 lg:via-transparent lg:to-transparent" />
+                {/* Scroll Indicator */}
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+                    <div className="w-8 h-12 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
+                        <div className="w-1.5 h-3 bg-accent rounded-full" />
                     </div>
-                    
-                    {/* Floating Stats Card - Mobile & Desktop */}
-                    <div className="absolute bottom-8 left-4 right-4 lg:left-8 lg:right-auto lg:bottom-12 animate-fade-in animation-delay-500">
-                        <Card className="glass-dark border-border/20 p-4 lg:p-6">
-                            <div className="flex items-center gap-4 lg:gap-6">
-                                <div className="flex -space-x-3">
-                                    {[1,2,3].map((i) => (
-                                        <div key={i} className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-accent/20 border-2 border-card flex items-center justify-center">
-                                            <Users className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
-                                        </div>
-                                    ))}
-                                </div>
-                                <div>
-                                    <p className="text-primary-foreground font-bold text-xl lg:text-2xl">500+</p>
-                                    <p className="text-primary-foreground/70 text-sm">Active Guards</p>
-                                </div>
+                </div>
+            </section>
                             </div>
                         </Card>
                     </div>
