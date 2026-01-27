@@ -212,11 +212,6 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-                            </div>
-                        </Card>
-                    </div>
-                </div>
-            </section>
 
             {/* Stats Section */}
             <section className="py-12 lg:py-0 lg:-mt-16 relative z-20 px-4 lg:px-8">
