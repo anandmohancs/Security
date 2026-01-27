@@ -247,13 +247,13 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Home Page Navigation and Content"
-    - "Theme Toggle Functionality"
+    - "Training Page Content"
     - "Navigation and Mobile Menu"
-    - "Contact Page Form and Validation"
-    - "Services Page with Filter and Modal"
-    - "Responsive Design"
-  stuck_tasks: []
+    - "Footer and Scroll to Top"
+  stuck_tasks:
+    - "Training Page Content"
+    - "Navigation and Mobile Menu"
+    - "Footer and Scroll to Top"
   test_all: true
   test_priority: "high_first"
 
