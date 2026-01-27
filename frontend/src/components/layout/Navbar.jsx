@@ -103,6 +103,8 @@ export const Navbar = () => {
                                         variant="ghost" 
                                         size="icon"
                                         className="text-foreground hover:bg-accent/10"
+                                        aria-label="Open menu"
+                                        data-testid="mobile-menu-button"
                                     >
                                         <Menu className="w-6 h-6" />
                                     </Button>
