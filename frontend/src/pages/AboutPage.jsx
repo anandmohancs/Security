@@ -73,27 +73,28 @@ export const AboutPage = () => {
     return (
         <div className="overflow-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center bg-hero-pattern px-4 lg:px-8 pt-24">
-                <div className="container mx-auto">
+            <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center pt-24 pb-12">
+                {/* Background */}
+                <div className="absolute inset-0 bg-muted/50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+                
+                <div className="container mx-auto px-4 lg:px-8 relative z-10">
                     <div className="max-w-3xl">
-                        <Badge className="bg-accent/20 text-accent border-accent/30 mb-6 animate-fade-in">
+                        <Badge className="bg-accent/10 text-accent border-accent/20 mb-6 animate-fade-in">
                             <Building className="w-3 h-3 mr-1" />
                             ABOUT US
                         </Badge>
-                        <h1 className="font-display text-5xl lg:text-7xl text-primary-foreground leading-tight mb-6 animate-fade-in animation-delay-100">
+                        <h1 className="font-display text-5xl lg:text-7xl text-foreground leading-tight mb-6 animate-fade-in animation-delay-100">
                             YOUR TRUSTED SECURITY
-                            <span className="text-gradient-gold block">PARTNER</span>
+                            <span className="text-accent block">PARTNER</span>
                         </h1>
-                        <p className="text-primary-foreground/80 text-lg lg:text-xl leading-relaxed animate-fade-in animation-delay-200">
+                        <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed animate-fade-in animation-delay-200">
                             Shiva Security Services is a leader in the field of security guards, 
                             providing comprehensive protection solutions across Bangalore, Delhi, 
                             and anywhere in India.
                         </p>
                     </div>
                 </div>
-                
-                {/* Decorative Element */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </section>
 
             {/* Our Story Section */}
