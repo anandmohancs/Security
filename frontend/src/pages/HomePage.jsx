@@ -98,18 +98,44 @@ export const HomePage = () => {
     return (
         <div className="overflow-hidden">
             {/* Hero Section - Full Width Modern Design */}
-            <section className="relative min-h-screen flex items-center pt-20">
-                {/* Background Image with Overlay */}
+            <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+                {/* Background Image - Subtle Watermark Style */}
                 <div className="absolute inset-0 z-0">
+                    {/* Main Background Image - Security Guards in Training */}
                     <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
                         style={{ 
-                            backgroundImage: 'url(https://images.unsplash.com/photo-1485230405346-71acb9518d9c?w=1920&h=1200&fit=crop&q=80)'
+                            backgroundImage: 'url(https://images.unsplash.com/photo-1750068382387-3e4708c998a8?w=1920&h=1200&fit=crop&q=80)',
+                            filter: 'grayscale(20%) contrast(1.1)'
                         }}
                     />
-                    {/* Dark Gradient Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background" />
+                    
+                    {/* Premium Multi-Layer Overlay System */}
+                    {/* Base dark overlay for text readability */}
+                    <div className="absolute inset-0 bg-background/75 dark:bg-background/85" />
+                    
+                    {/* Gradient from left for content area */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
+                    
+                    {/* Top gradient for navbar blending */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent h-40" />
+                    
+                    {/* Bottom gradient for section transition */}
+                    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+                    
+                    {/* Accent color overlay for vibrancy */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/10" />
+                    
+                    {/* Subtle vignette effect */}
+                    <div className="absolute inset-0" style={{ 
+                        background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, hsl(var(--background) / 0.4) 100%)'
+                    }} />
+                </div>
+
+                {/* Animated Background Elements for Premium Feel */}
+                <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+                    <div className="absolute top-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" />
+                    <div className="absolute bottom-20 left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse animation-delay-500" />
                 </div>
 
                 {/* Content */}
@@ -117,7 +143,7 @@ export const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
                         {/* Left Content */}
                         <div className="py-12 lg:py-0">
-                            <Badge className="bg-accent/20 text-accent border-accent/30 mb-6 animate-fade-in">
+                            <Badge className="bg-accent/20 text-accent border-accent/30 mb-6 animate-fade-in backdrop-blur-sm">
                                 <Shield className="w-3 h-3 mr-1" />
                                 PSARA Licensed Security Provider
                             </Badge>
@@ -134,7 +160,7 @@ export const HomePage = () => {
                             
                             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
                                 <Link to="/contact">
-                                    <Button className="btn-accent rounded-lg px-8 py-6 text-lg font-semibold w-full sm:w-auto">
+                                    <Button className="btn-accent rounded-lg px-8 py-6 text-lg font-semibold w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
                                         Get Free Quote
                                         <ChevronRight className="w-5 h-5 ml-2" />
                                     </Button>
@@ -142,7 +168,7 @@ export const HomePage = () => {
                                 <Link to="/services">
                                     <Button 
                                         variant="outline" 
-                                        className="rounded-lg px-8 py-6 text-lg font-semibold border-border text-foreground hover:bg-muted w-full sm:w-auto"
+                                        className="rounded-lg px-8 py-6 text-lg font-semibold border-border text-foreground hover:bg-muted/80 backdrop-blur-sm w-full sm:w-auto"
                                     >
                                         Our Services
                                     </Button>
